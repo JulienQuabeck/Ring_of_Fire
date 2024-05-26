@@ -1,5 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Game } from '../../models/game';
 
 @Component({
   selector: 'app-game',
@@ -9,10 +10,23 @@ import { Component } from '@angular/core';
   styleUrl: './game.component.scss'
 })
 
-export class GameComponent {
-pickCardAnimation = false;
+export class GameComponent implements OnInit {
+  pickCardAnimation = false;
+  game: Game;
 
-  takeCard(){
+  constructor() { }
+
+  ngOnInit(): void {
+    this.newGame();
+  }
+
+  newGame() {
+    this.game = new Game();
+    console.log(this.game);
+  }
+
+
+  takeCard() {
     this.pickCardAnimation = true;
   }
 }
