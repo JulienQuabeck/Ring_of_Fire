@@ -2,6 +2,7 @@ import { CommonModule, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../../models/game';
 
+
 @Component({
   selector: 'app-game',
   standalone: true,
