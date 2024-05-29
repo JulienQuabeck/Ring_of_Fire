@@ -8,5 +8,5 @@
 </mat-dialog-content>
 <mat-dialog-actions class="btn-div">
     <button mat-button (click)="onNoClick()" color="primary">No Thanks</button>
-    <button mat-button [mat-dialog-close]="" cdkFocusInitial color="primary">OK</button>
+    <button mat-button [mat-dialog-close]="name" cdkFocusInitial color="primary">OK</button>
 </mat-dialog-actions>
