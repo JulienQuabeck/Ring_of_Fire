@@ -41,9 +41,6 @@ export class GameInfoComponent implements OnInit, OnChanges {
       let cardNumber = +this.card.split('_')[1];
       this.title = this.cardAction[cardNumber - 1].title;
       this.description = this.cardAction[cardNumber - 1].description;
-    }else{
-      this.title = 'Title of the Card';
-      this.description = 'Here you will find the task you or an other player need to fullfill';
     }
   }
 }

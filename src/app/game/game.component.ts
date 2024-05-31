@@ -62,7 +62,9 @@ openDialog() {
   })
 
   dialogRef.afterClosed().subscribe(name => {
-    this.game.players.push(name);
+    if(name && name.length > 0){
+      this.game.players.push(name);
+    }
   })
 }
 }
